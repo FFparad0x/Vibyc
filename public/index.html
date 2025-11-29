@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Party - Add Your Vibe!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title animate-fade-in">🎉 Birthday Party 🎉</h1>
+                <p class="hero-subtitle animate-fade-in-delay">Share your moments, add your vibe!</p>
+                <button class="cta-button animate-bounce-in" id="addVibeBtn">
+                    <span class="cta-text">✨ Add Vibe ✨</span>
+                </button>
+            </div>
+            <div class="floating-elements">
+                <div class="floating-balloon balloon-1">🎈</div>
+                <div class="floating-balloon balloon-2">🎈</div>
+                <div class="floating-balloon balloon-3">🎈</div>
+                <div class="floating-confetti confetti-1">🎊</div>
+                <div class="floating-confetti confetti-2">🎊</div>
+            </div>
+        </header>
+
+        <!-- Upload Section -->
+        <section class="upload-section" id="uploadSection">
+            <div class="upload-container">
+                <div class="upload-box" id="uploadBox">
+                    <div class="upload-icon">📸</div>
+                    <p class="upload-text">Drop your photo here or click to browse</p>
+                    <input type="file" id="fileInput" accept="image/*" multiple style="display: none;">
+                </div>
+                <div class="upload-progress" id="uploadProgress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <p class="progress-text">Uploading...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Album Section -->
+        <section class="album-section">
+            <h2 class="section-title">Photo Album</h2>
+            <div class="photo-cloud" id="photoCloud">
+                <div class="loading-spinner" id="loadingSpinner">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal for full-size image -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img class="modal-image" id="modalImage" src="" alt="Full size">
+        <div class="modal-actions">
+            <button class="download-btn" id="downloadBtn">⬇️ Download</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
